@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SubaFood</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      position: relative;
+      width: 900px;
+      height: 500px;
+      background: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px #f87102;
+      display: flex;
+    }
+
+    .form-container {
+      width: 50%;
+      padding: 40px;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+      position: relative;
+      z-index: 2;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+    }
+
+    .input-box {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px 40px 12px 15px;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #ff7b00;
+      color: white;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .input-box i {
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      color: #ff8800;
+    }
+
+    .form-container button {
+      padding: 12px;
+      background: linear-gradient(90deg, #f54f03, #00c2ff);
+      border: none;
+      border-radius: 30px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .form-container button:hover {
+      background: linear-gradient(90deg, #00c2ff, #00fff7);
+    }
+
+    .form-container p {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .form-container p a {
+      color: #00e1ff;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .welcome-panel {
+      width: 50%;
+      background: linear-gradient(135deg, #ff7b00, #007cf0);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .welcome-panel h1 {
+      margin-bottom: 15px;
+    }
+
+    .container.signup-mode .login-box {
+      display: none;
+    }
+
+    .container.signup-mode .signup-box {
+      display: flex;
+    }
+
+    .signup-box {
+      display: none;
+      flex-direction: column;
+    }
+
+    .toggle-btn {
+      cursor: pointer;
+    }
+
+    .error-display {
+      display: none;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .error-display img {
+      width: 50px;
+      margin-bottom: 8px;
+    }
+
+    .error-display p {
+      color: red;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+      }
+
+      .form-container, .welcome-panel {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" id="container">
+  <!-- Login Form -->
+  <div class="form-container login-box">
+    <h2>Login</h2>
+
+    <div class="input-box">
+      <input type="text" id="login-username" placeholder="Username" />
+      <i>👤</i>
+    </div>
+    <div class="input-box">
+      <input type="password" id="login-password" placeholder="Password" />
+      <i>🔒</i>
+    </div>
+
+   <div class="error-display" id="login-error">
+  <img src="https://cdn-icons-png.flaticon.com/512/463/463612.png" alt="error" style="width: 24px;" />
+  <span id="login-error-msg">Please enter username and password</span>
+</div>
+
+
+    <button onclick="validateLogin()">Login</button>
+    <p>Don't have an account? <a class="toggle-btn" onclick="toggleForm()">Sign Up</a></p>
+  </div>
+
+  <!-- Signup Form -->
+  <div class="form-container signup-box">
+    <h2>Sign Up</h2>
+
+    <div class="input-box">
+      <input type="text" id="signup-username" placeholder="Username" />
+      <i>👤</i>
+    </div>
+    <div class="input-box">
+      <input type="email" id="signup-email" placeholder="Email" />
+      <i>📧</i>
+    </div>
+    <div class="input-box">
+      <input type="password" id="signup-password" placeholder="Password" />
+      <i>🔒</i>
+    </div>
+
+   <div class="error-display" id="signup-error">
+  <img src="https://cdn-icons-png.flaticon.com/512/463/463612.png" alt="error" style="width: 24px;" />
+  <span id="signup-error-msg">All fields are required</span>
+</div>
+
+
+    <button onclick="validateSignup()">Sign Up</button>
+    <p>Already have an account? <a class="toggle-btn" onclick="toggleForm()">Login</a></p>
+  </div>
+
+  <!-- Welcome Panel -->
+  <div class="welcome-panel">
+    <h1>WELCOME BACK!</h1>  <strong>suba online food ordering</strong>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+  </div>
+</div>
+
+<script>
+  function toggleForm() {
+    document.getElementById('container').classList.toggle('signup-mode');
+    clearErrors(); // hide error when toggling
+  }
+
+  function clearErrors() {
+    document.getElementById("login-error").style.display = "none";
+    document.getElementById("signup-error").style.display = "none";
+  }
+
+  function validateLogin() {
+  const username = document.getElementById("login-username").value.trim();
+  const password = document.getElementById("login-password").value.trim();
+  const errorBox = document.getElementById("login-error");
+
+  if (!username || !password) {
+    errorBox.style.display = "block";
+  } else {
+    errorBox.style.display = "none";
+    alert(`✅ Logged in as ${username}`);
+    
+    // ✅ Redirect to home.html
+    window.location.href = "home.html";
+  }
+}
+
+  function validateSignup() {
+    const username = document.getElementById("signup-username").value.trim();
+    const email = document.getElementById("signup-email").value.trim();
+    const password = document.getElementById("signup-password").value.trim();
+    const errorBox = document.getElementById("signup-error");
+
+    if (!username || !email || !password) {
+      errorBox.style.display = "block";
+    } else {
+      errorBox.style.display = "none";
+      alert(`✅ Welcome, ${username}! Your account is created.`);
+    }
+  }
+  function validateSignup() {
+  const username = document.getElementById("signup-username").value.trim();
+  const email = document.getElementById("signup-email").value.trim();
+  const password = document.getElementById("signup-password").value.trim();
+  const errorBox = document.getElementById("signup-error");
+
+  if (!username || !email || !password) {
+    errorBox.style.display = "block";
+  } else {
+    errorBox.style.display = "none";
+    alert(`✅ Welcome, ${username}! Your account is created.`);
+    
+    // 👇 Automatically switch to login form
+    toggleForm();
+  }
+}
+
+</script>
+
+</body>
+</html>

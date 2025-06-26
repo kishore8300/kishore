@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Burger Menu | SubaFood</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffdf5;
+    }
+
+    header {
+      color: #333;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .menu-card {
+      width: 250px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-card h3 {
+      margin: 10px 0;
+    }
+
+    .menu-card p {
+      color: #555;
+      font-size: 14px;
+      padding: 0 10px 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #d84315;
+    }
+
+    /* Navbar */
+    .navbar {
+      overflow: hidden;
+      background-color: #d84315;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: #bf360c;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="home.html">HOME</a>
+    <div class="dropdown">
+      <button class="dropbtn">MENU 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="all.html">All</a>
+        <a href="veg.html">Veg</a>
+        <a href="nonveg.html">Non-Veg</a>
+        <a href="pizza.html">Pizza</a>
+        <a href="burger.html">Burger</a>
+      </div>
+    </div>
+    <a href="restaurants.html">RESTAURANTS</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>🍔 Burger Menu</h1>
+  </header>
+
+  <!-- Burger Menu Cards -->
+  <div class="menu-container">
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHp64n-eLrDSrY29_HCRIuP7-p89ndb18ezw&s" alt="cheeseburger">
+      <h3>Cheeseburger</h3>
+      <p>Classic beef patty with melted cheddar cheese.</p>
+      <p class="price">₹160</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScFrVrYvU2pNo4X4qADQo2vwiD-1J_oF_-_w&s" alt="Veggie Burger">
+      <h3>Veggie Burger</h3>
+      <p>Grilled vegetable patty with fresh lettuce & tomato.</p>
+      <p class="price">₹150</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7rDEpgtF7vYP7zevFijQ-thUFR6B8HEfMkg&s" alt="chickenburger">
+      <h3>Chicken Burger</h3>
+      <p>Fried chicken fillet with mayo and pickles.</p>
+      <p class="price">₹170</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRceerY0hLBIAbpcGLU2x8Dwb7R7iyM5b30Sg&s" alt="Double Cheese Burger">
+      <h3>Double Cheese</h3>
+      <p>Double patties with double melted cheese layers.</p>
+      <p class="price">₹200</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6_Vx2vuc91CdaWAAH0lmX2VkRNWUst6oBRQ&s" alt="BBQ Burger">
+      <h3>BBQ Burger</h3>
+      <p>Grilled beef with smoky BBQ sauce and onions.</p>
+      <p class="price">₹180</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDj0e0X9HICgpTLNU_vNI0opcCBthIrpLYVw&s" alt="Paneer Burger">
+      <h3>Paneer Burger</h3>
+      <p>Spiced paneer patty with mint mayo and veggies.</p>
+      <p class="price">₹160</p>
+    </div>
+
+    <!-- Extra 6 burgers -->
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlmZ4-io5tF6vufSLsSW-i-uFdNkAIWEknVA&s" alt="Bacon Burger">
+      <h3>Bacon Burger</h3>
+      <p>Juicy beef with crispy bacon strips and cheddar.</p>
+      <p class="price">₹220</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ncpr1HDpZym-tEwZyuIul5DlAW3lGavvRw&s" alt="Mushroom Burger">
+      <h3>Mushroom Burger</h3>
+      <p>Sauteed mushrooms with garlic butter and cheese.</p>
+      <p class="price">₹190</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT0tJSe6fbdkkV4w8msN1-VBM-rp2_Nkf8rw&s" alt="Spicy Burger">
+      <h3>Spicy Burger</h3>
+      <p>Loaded with jalapeños, spicy sauce and onions.</p>
+      <p class="price">₹170</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW89ylLlgsGWxcZdi396khQWYP9jfYy0cBKw&s" alt="Fish Burger">
+      <h3>Fish Burger</h3>
+      <p>Crispy fish patty with tartar sauce and lettuce.</p>
+      <p class="price">₹180</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo0ckDObEhaOYEhHKNgCa_MYznWY-vZzMKjQ&s" alt="Egg Burger">
+      <h3>Egg Burger</h3>
+      <p>Soft bun filled with fried egg and creamy mayo.</p>
+      <p class="price">₹140</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT0tJSe6fbdkkV4w8msN1-VBM-rp2_Nkf8rw&s" alt="Tandoori Burger">
+      <h3>Tandoori Burger</h3>
+      <p>Spicy tandoori-flavored chicken with onion rings.</p>
+      <p class="price">₹190</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

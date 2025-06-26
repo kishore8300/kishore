@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurants</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f3f3;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #d84315;
+      margin-bottom: 30px;
+    }
+
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .menu-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: scale(1.03);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-card .info {
+      padding: 15px;
+    }
+
+    .menu-card .info h3 {
+      margin: 0;
+      color: #bf360c;
+    }
+
+    .menu-card .info p {
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #d84315;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #f30808;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: right;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: rgb(54, 92, 54);
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="home.html">HOME</a>
+    <div class="dropdown">
+      <button class="dropbtn">MENU 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="veg.html">Veg</a>
+        <a href="nonveg.html">Non-Veg</a>
+      </div>
+    </div>
+    <a href="restaurants.html">RESTAURANTS</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+
+  <h1>🏬 Our Partner Restaurants</h1>
+
+  <div class="menu-container">
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScBB1JDdRAnXoyxY1wT-MVdIO9BdxdNkxZkw&s" alt="spice garden">
+      <div class="info">
+        <h3>Spice Garden</h3>
+        <p>Famous for South Indian veg delicacies.</p>
+        <p class="price">Chennai</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh4dG3cWJsa-Ti8xnspILPW1BygmLWHRA6dA&s" alt="Tandoori Flame">
+      <div class="info">
+        <h3>Tandoori Flame</h3>
+        <p>Specialized in grilled and tandoori dishes.</p>
+        <p class="price">Bengaluru</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxO_1UKBVD5kmtD3iGNtG7aaBZ6zgx84X5nQ&s" alt="Sky Dine">
+      <div class="info">
+        <h3>Sky Dine</h3>
+        <p>Rooftop dining with a beautiful skyline view.</p>
+        <p class="price">Hyderabad</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZoihLMIAVd57Nqq_mJbpk5dh82QE99PgU8g&s" alt="Italiano Hub">
+      <div class="info">
+        <h3>Italiano Hub</h3>
+        <p>Serves best wood-fired pizzas and pastas.</p>
+        <p class="price">Coimbatore</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTed-OxFsYel1QzPBtGM1v6H-GRy-f-TIwjJw&s" alt="Dragon House">
+      <div class="info">
+        <h3>Dragon House</h3>
+        <p>Authentic Chinese cuisine in desi style.</p>
+        <p class="price">Madurai</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0wL_aonXmZiKkS1PbkVrkWJboupJDnC5uEg&s" alt="Morning Treat">
+      <div class="info">
+        <h3>Morning Treat</h3>
+        <p>South Indian breakfast specialist restaurant.</p>
+        <p class="price">Trichy</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

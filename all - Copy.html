@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veg Menu | SubaFood</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0fff0;
+    }
+
+    header {
+      
+      color: rgb(10, 10, 10);
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .menu-card {
+      width: 250px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-card h3 {
+      margin: 10px 0;
+    }
+
+    .menu-card p {
+      color: #555;
+      font-size: 14px;
+      padding: 0 10px 15px;
+    }
+    .navbar {
+  overflow: hidden;
+  background-color: #f30808;
+  
+}
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align:right;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(54, 92, 54);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  </style>
+</head>
+<body>
+    <div class="navbar">
+  <a href="home.html">HOME</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn">MENU 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="all.html">All</a>
+      <a href="veg.html">veg</a>
+      <a href="nonveg.html">NON-veg</a>
+      <a href="pizza.html">Pizza</a>
+      <a href="burger.html">burger</a>
+    </div>
+  </div>
+  <a href="restaurants.html">RESTAURANTS</a>
+  <a href="about.html">ABOUT</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+
+  <header>
+    <h1>All Menu</h1>
+  </header>
+
+  <div class="menu-container">
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpurG4cjehP7R5fwDCxCCFZU8OnDro5TGn6g&s" alt="Paneer Butter Masala">
+      <div class="info">
+        <h3>Paneer Butter Masala</h3>
+        <p>Cottage cheese in a creamy tomato gravy.</p>
+        <p class="price">₹180</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg_bPFjyuBc_wKvc-Oci4VCsWaj3l5Jns-HQ&s" alt="Veg Biryani">
+      <div class="info">
+        <h3>Veg Biryani</h3>
+        <p>Spicy rice with mixed vegetables and herbs.</p>
+        <p class="price">₹150</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkRDvCfxP2qGvrirVu4m1y0-wrxDvVlzi6aA&s" alt="Aloo Gobi">
+      <div class="info">
+        <h3>Aloo Gobi</h3>
+        <p>Potatoes and cauliflower cooked with Indian spices.</p>
+        <p class="price">₹120</p>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ42Rw19_TAwemnjQstkE2HlJHWJeroAyA4Dg&s" alt="Egg Biryani">
+      <div class="info">
+        <h3>Egg Biryani</h3>
+        <p>Basmati rice layered with boiled spicy eggs.</p>
+        <p class="price">₹140</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0JyCAcxcbhGMmRgAEMx0CkrcnfpDQ0nQq3A&s" alt="chicken kuruma">
+      <div class="info">
+        <h3>Chicken Kurma</h3>
+        <p>Chicken in creamy coconut and cashew curry.</p>
+        <p class="price">₹190</p>
+      </div>
+    </div>
+    <div class="menu-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYQw9E3z8VSFLJQ2rpWwf0RAzrzUDPxJ7ohw&s" alt="Spicy Supreme">
+    <h3>Spicy Supreme</h3>
+    <p>Loaded with jalapeños, chili flakes, and red paprika.</p>
+    <p class="price">₹220</p>
+  </div>
+
+  <div class="menu-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGevclgFAzUQ9LlFBxjm-Opl8pDoosXYYgOw&s" alt="Chicken Tikka Pizza">
+    <h3>Chicken Tikka Pizza</h3>
+    <p>Tandoori chicken chunks on classic tomato base.</p>
+    <p class="price">₹250</p>
+  </div>
+
+  <div class="menu-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0f75_nsZ5fvjeJ3hMjkpZTIp29Ibfc-CFQ&s" alt="paneer">
+    <h3>Paneer Pizza</h3>
+    <p>Indian cottage cheese with onion and capsicum toppings.</p>
+    <p class="price">₹200</p>
+  </div>
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ29fQHlhD2fYAIvS88MzXeb5oBOg1CiwJCIQ&s" alt="Chicken Biryani">
+      
+      <div class="info">
+        <h3>Chicken Biryani</h3>
+        <p>Spiced basmati rice layered with marinated chicken.</p>
+        <p class="price">₹200</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTam94cKwYJyx5jbw86CjxrJUsoMVO2GPNWg&s" alt="Chicken Curry">
+      <div class="info">
+        <h3>Chicken Curry</h3>
+        <p>Chicken cooked in a rich onion-tomato gravy.</p>
+        <p class="price">₹180</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF85TgByKTnqkA_j8BzAa9DwRp-quuoWXuWA&s" alt="mutton curry">
+      <div class="info">
+        <h3>Mutton Curry</h3>
+        <p>Slow-cooked mutton in spicy thick masala.</p>
+        <p class="price">₹250</p>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHp64n-eLrDSrY29_HCRIuP7-p89ndb18ezw&s" alt="cheeseburger">
+      <h3>Cheeseburger</h3>
+      <p>Classic beef patty with melted cheddar cheese.</p>
+      <p class="price">₹160</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScFrVrYvU2pNo4X4qADQo2vwiD-1J_oF_-_w&s" alt="Veggie Burger">
+      <h3>Veggie Burger</h3>
+      <p>Grilled vegetable patty with fresh lettuce & tomato.</p>
+      <p class="price">₹150</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7rDEpgtF7vYP7zevFijQ-thUFR6B8HEfMkg&s" alt="chickenburger">
+      <h3>Chicken Burger</h3>
+      <p>Fried chicken fillet with mayo and pickles.</p>
+      <p class="price">₹170</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRceerY0hLBIAbpcGLU2x8Dwb7R7iyM5b30Sg&s" alt="Double Cheese Burger">
+      <h3>Double Cheese</h3>
+      <p>Double patties with double melted cheese layers.</p>
+      <p class="price">₹200</p>
+    </div>
+
+
+  </div>
+</body>
+</html>

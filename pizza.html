@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pizza Menu | SubaFood</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffaf0;
+    }
+
+    header {
+      color: #333;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .menu-card {
+      width: 250px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-card h3 {
+      margin: 10px 0;
+    }
+
+    .menu-card p {
+      color: #555;
+      font-size: 14px;
+      padding: 0 10px 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #e53935;
+    }
+
+    /* Navbar */
+    .navbar {
+      overflow: hidden;
+      background-color: #e53935;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: #b71c1c;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="home.html">HOME</a>
+    <div class="dropdown">
+      <button class="dropbtn">MENU 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="all.html">All</a>
+        <a href="veg.html">Veg</a>
+        <a href="nonveg.html">Non-Veg</a>
+        <a href="pizza.html">Pizza</a>
+        <a href="burger.html">Burger</a>
+      </div>
+    </div>
+    <a href="restaurants.html">RESTAURANTS</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>🍕 Pizza Menu</h1>
+  </header>
+
+  <!-- Pizza Menu Cards -->
+  <div class="menu-container">
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWwMpF34eUfyYrLXbT1N39WULGpmnWgkrVjA&s" alt="Cheese Pizza">
+      <h3>Cheese Pizza</h3>
+      <p>Classic cheese pizza with extra mozzarella.</p>
+      <p class="price">₹180</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUpBIg2iL6KQuynTGqYnq59YBX-EmT9s-hpw&s" alt="veggie delight">
+      <h3>Veggie Delight</h3>
+      <p>Topped with bell peppers, onions, and olives.</p>
+      <p class="price">₹200</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAmEUIwoIwtE9zWWZh0l4T0xXxmTzlg_QAwA&s" alt="Pepperoni">
+      <h3>Pepperoni Pizza</h3>
+      <p>Loaded with spicy pepperoni slices and cheese.</p>
+      <p class="price">₹220</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJsx_KIotrHz6r0OoadW8BpSapSr9xZz0fig&s" alt="BBQ Chicken">
+      <h3>BBQ Chicken Pizza</h3>
+      <p>Chicken, BBQ sauce, and melted cheese.</p>
+      <p class="price">₹230</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROCGkdUIiSUYzF2fIJ8d22NY1Tg4hfU4yoiQ&s" alt="Margherita">
+      <h3>Margherita</h3>
+      <p>Fresh basil, mozzarella & tomato sauce base.</p>
+      <p class="price">₹160</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6VPC9C5hZTDXI2DPHWbFHK9IybPwdcn03Yg&s" alt="Hawaiian Pizza">
+      <h3>Hawaiian Pizza</h3>
+      <p>Ham and pineapple on a cheese-filled crust.</p>
+      <p class="price">₹210</p>
+    </div>
+<div class="menu-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAa_PLTSVg3Mqvam7ftIOZW_yfKzJ736iqRA&s" alt="Four Cheese Pizza">
+    <h3>Four Cheese Pizza</h3>
+    <p>Rich combo of mozzarella, cheddar, parmesan & blue cheese.</p>
+    <p class="price">₹240</p>
+  </div>
+
+  <div class="menu-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw1RQ8qvQDOHtq2UhUddVacE8lLL-xgMOeag&s"alt="tandoori paneer pizza">
+    <h3>Tandoori Paneer Pizza</h3>
+    <p>Indian-style paneer cubes with spicy tandoori masala.</p>
+    <p class="price">₹210</p>
+  </div>
+
+  <div class="menu-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1NOT_lb_cJGfV5Yqza2pD7g1SBqQ6RnWTbw&s" alt="Mushroom Pizza">
+    <h3>Mushroom Magic</h3>
+    <p>Fresh mushrooms and herbs on cheesy crust.</p>
+    <p class="price">₹190</p>
+  </div>
+
+  <div class="menu-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYQw9E3z8VSFLJQ2rpWwf0RAzrzUDPxJ7ohw&s" alt="Spicy Supreme">
+    <h3>Spicy Supreme</h3>
+    <p>Loaded with jalapeños, chili flakes, and red paprika.</p>
+    <p class="price">₹220</p>
+  </div>
+
+  <div class="menu-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGevclgFAzUQ9LlFBxjm-Opl8pDoosXYYgOw&s" alt="Chicken Tikka Pizza">
+    <h3>Chicken Tikka Pizza</h3>
+    <p>Tandoori chicken chunks on classic tomato base.</p>
+    <p class="price">₹250</p>
+  </div>
+
+  <div class="menu-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0f75_nsZ5fvjeJ3hMjkpZTIp29Ibfc-CFQ&s" alt="paneer">
+    <h3>Paneer Pizza</h3>
+    <p>Indian cottage cheese with onion and capsicum toppings.</p>
+    <p class="price">₹200</p>
+  </div>
+</div>
+</body>
+</html>

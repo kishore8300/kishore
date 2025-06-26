@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+
+.navbar {
+  overflow: hidden;
+  background-color: #f30808;
+  
+}
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align:right;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(54, 92, 54);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Features Section */
+ .hero {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    .hero p {
+      font-size: 20px;
+      text-shadow: 1px 1px 6px #000;
+    }
+
+    /* Features */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .feature-box {
+      background: #fff;
+      padding: 30px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      width: 250px;
+    }
+
+    .feature-box h3 {
+      margin-top: 15px;
+      color: #ff4d4d;
+    }
+
+    /* Menu Preview */
+    .menu-preview {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .menu-preview h2 {
+      margin-bottom: 40px;
+      color: #ff4d4d;
+    }
+
+    .menu-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .menu-card {
+      width: 200px;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .menu-card h4 {
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .menu-items {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+</style>
+</head>
+<body style="background-color:rgb(10, 10, 10);">
+  
+<div class="navbar">
+  
+  <a href="#home">HOME</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn">MENU 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="all.html">All</a>
+      <a href="veg.html">veg</a>
+      <a href="nonveg.html">NON-veg</a>
+      <a href="pizza.html">Pizza</a>
+      <a href="burger.html">burger</a>
+
+    </div>
+  </div>
+  <a href="#restaurants.html">RESTAURANTS</a>
+  <a href="#">ABOUT</a>
+  <a href="#news">CONTACT</a>
+
+</div>
+<section class="hero">
+    <div>
+      <h1>Order Your Favorite Food Anytime</h1>
+      <p>Fast delivery | Fresh taste | Great deals</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Fast" width="50" />
+      <h3>Fast Delivery</h3>
+      <p>Delivered within 30 minutes</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Fresh" width="50" />
+      <h3>Fresh Ingredients</h3>
+      <p>Only quality food prepared</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Offer" width="50" />
+      <h3>Best Offers</h3>
+      <p>Save more every order</p>
+    </div>
+  </section>
+
+  <!-- Menu Preview -->
+  <section class="menu-preview">
+    <h2>Popular Dishes</h2>
+    <div class="menu-items">
+      <div class="menu-card">
+        <img src="https://source.unsplash.com/200x150/?pizza" alt="Pizza" />
+        <h4>Cheese Pizza</h4>
+      </div>
+      <div class="menu-card">
+        <img src="https://source.unsplash.com/200x150/?burger" alt="Burger" />
+        <h4>Beef Burger</h4>
+      </div>
+      <div class="menu-card">
+        <img src="https://source.unsplash.com/200x150/?noodles" alt="Noodles" />
+        <h4>Spicy Noodles</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SubaFood. All rights reserved.</p>
+  </footer>
+
+</body>
+</body>
+</html>
